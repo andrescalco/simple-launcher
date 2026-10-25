@@ -9,7 +9,7 @@ The elderly person whose phone runs the launcher and who uses it day to day.
 _Avoid_: User, dad, senior
 
 **Caretaker**:
-The family member who decides what the Owner sees and configures the launcher on the Owner's behalf.
+A family member who configures the launcher on the Owner's behalf; there can be more than one.
 _Avoid_: Admin, parent mode, helper
 
 ## Home
@@ -29,3 +29,9 @@ _Avoid_: Address, location, route
 **Contact**:
 A person the Caretaker has chosen to appear in the Owner's contact list, with quick ways to reach them.
 _Avoid_: Favorite, friend, entry
+
+## Calls
+
+**Call Overlay**:
+The large floating buttons shown on top of a WhatsApp video call so the Owner can flip the camera or hang up without hunting for WhatsApp's own controls.
+_Avoid_: Floating icon, bubble, call buttons
