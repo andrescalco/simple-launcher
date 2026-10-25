@@ -12,6 +12,24 @@ _Avoid_: User, dad, senior
 A family member who configures the launcher on the Owner's behalf; there can be more than one.
 _Avoid_: Admin, parent mode, helper
 
+## Apps
+
+**Launcher**:
+The app on the Owner's phone that replaces the home screen.
+_Avoid_: Owner app, home app
+
+**Caretaker App**:
+The app on a Caretaker's phone used to configure the Owner's Launcher remotely; shown to users as "Cuidador".
+_Avoid_: Admin app, companion app, remote app
+
+**Caretaker Mode**:
+The PIN-protected configuration screens inside the Launcher itself, for setup that has to happen on the Owner's phone.
+_Avoid_: Settings, admin mode, local mode
+
+**Pairing**:
+The one-time, in-person step that links an Owner's phone to the Caretakers.
+_Avoid_: Registration, login, enrolment
+
 ## Home
 
 **Home Screen**:

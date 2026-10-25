@@ -1,0 +1,3 @@
+# Remote support uses a third-party unattended-access tool
+
+Caretakers sometimes need to see and control the Owner's screen. We do not build this into the Launcher, and we do not have the Launcher open TeamViewer QuickSupport on command, because QuickSupport still asks the Owner to accept every session. Instead the Owner's phone has an unattended-access tool (TeamViewer Host or AnyDesk) installed, which Caretakers connect to with a password, and the Launcher only keeps it off the Home Screen. Opening a support app on command is the fallback if unattended access does not work on the Owner's phone.
