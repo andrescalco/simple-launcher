@@ -44,8 +44,9 @@ class LauncherStateHolder(
     private var lastAcceptedTapMillis: Long? = null
 
     /**
-     * Returns where the tap leads, or null if the Tile does nothing yet or the tap repeats one
-     * accepted less than [TAP_DEBOUNCE_MILLIS] ago.
+     * Returns where the tap leads, or null if the Tile does nothing yet or the tap comes less than
+     * [TAP_DEBOUNCE_MILLIS] after the last accepted one. The window covers every Tile, so a shaky
+     * double tap can't open one Tile and then hit whatever the next screen shows in its place.
      */
     fun onTileTapped(position: Int): OutgoingRequest? {
         val tapMillis = elapsedMillis()

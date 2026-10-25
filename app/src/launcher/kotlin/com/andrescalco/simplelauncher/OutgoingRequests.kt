@@ -12,9 +12,8 @@ fun Context.leaveFor(request: OutgoingRequest) {
         is OutgoingRequest.OpenApp -> packageManager.getLaunchIntentForPackage(request.packageName)
     }
     try {
-        if (intent == null) throw ActivityNotFoundException()
-        startActivity(intent)
+        if (intent != null) return startActivity(intent)
     } catch (_: ActivityNotFoundException) {
-        Toast.makeText(this, R.string.app_not_found, Toast.LENGTH_LONG).show()
     }
+    Toast.makeText(this, R.string.app_not_found, Toast.LENGTH_LONG).show()
 }

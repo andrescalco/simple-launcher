@@ -26,7 +26,7 @@ import java.time.LocalDateTime
 /** The Home Screen: the single page the Owner always returns to when pressing Home. */
 class HomeActivity : ComponentActivity() {
 
-    private lateinit var launcher: LauncherStateHolder
+    private lateinit var stateHolder: LauncherStateHolder
 
     private val vibrator: Vibrator by lazy {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -40,15 +40,15 @@ class HomeActivity : ComponentActivity() {
     private val deviceFacts = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                Intent.ACTION_BATTERY_CHANGED -> batteryPercent(intent)?.let(launcher::onBatteryLevelChanged)
-                else -> launcher.onTimeChanged(LocalDateTime.now())
+                Intent.ACTION_BATTERY_CHANGED -> batteryPercent(intent)?.let(stateHolder::onBatteryLevelChanged)
+                else -> stateHolder.onTimeChanged(LocalDateTime.now())
             }
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        launcher = LauncherStateHolder(
+        stateHolder = LauncherStateHolder(
             configuration = ConfigurationFile(filesDir).load(),
             now = LocalDateTime.now(),
             elapsedMillis = SystemClock::elapsedRealtime,
@@ -63,7 +63,7 @@ class HomeActivity : ComponentActivity() {
 
         setContent {
             SimpleTheme {
-                val state by launcher.homeScreen.collectAsState()
+                val state by stateHolder.homeScreen.collectAsState()
                 HomeScreen(state = state, onTileTap = ::onTileTap)
             }
         }
@@ -71,7 +71,7 @@ class HomeActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
-        launcher.onTimeChanged(LocalDateTime.now())
+        stateHolder.onTimeChanged(LocalDateTime.now())
         val filter = IntentFilter().apply {
             addAction(Intent.ACTION_BATTERY_CHANGED)
             addAction(Intent.ACTION_TIME_TICK)
@@ -88,7 +88,7 @@ class HomeActivity : ComponentActivity() {
 
     private fun onTileTap(position: Int) {
         vibrator.vibrate(VibrationEffect.createOneShot(TAP_VIBRATION_MILLIS, VibrationEffect.DEFAULT_AMPLITUDE))
-        launcher.onTileTapped(position)?.let(::leaveFor)
+        stateHolder.onTileTapped(position)?.let(::leaveFor)
     }
 
     private fun batteryPercent(intent: Intent): Int? {

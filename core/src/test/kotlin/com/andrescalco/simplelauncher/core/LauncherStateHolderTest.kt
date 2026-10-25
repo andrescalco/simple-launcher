@@ -43,6 +43,18 @@ class LauncherStateHolderTest {
     }
 
     @Test
+    fun `a tap on another Tile within a second is ignored too`() {
+        val launcher = launcher()
+
+        elapsedMillis = 10_000
+        launcher.onTileTapped(launcher.positionOf("Contatos"))
+        elapsedMillis = 10_400
+        val whatsApp = launcher.onTileTapped(launcher.positionOf("WhatsApp"))
+
+        assertNull(whatsApp)
+    }
+
+    @Test
     fun `a tap after the debounce window opens the app again`() {
         val launcher = launcher()
         val whatsApp = launcher.positionOf("WhatsApp")

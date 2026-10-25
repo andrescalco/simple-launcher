@@ -75,7 +75,7 @@ fun HomeScreen(state: HomeScreenState, onTileTap: (position: Int) -> Unit) {
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             itemsIndexed(state.tiles) { position, tile ->
-                TileButton(tile, onTap = { onTileTap(position) })
+                TileCell(tile, onTap = { onTileTap(position) })
             }
         }
     }
@@ -116,7 +116,7 @@ private fun Battery(battery: BatteryIndicator) {
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun TileButton(tile: Tile, onTap: () -> Unit) {
+private fun TileCell(tile: Tile, onTap: () -> Unit) {
     Column(
         modifier = Modifier
             .aspectRatio(1f)
