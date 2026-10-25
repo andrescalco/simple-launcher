@@ -30,6 +30,10 @@ _Avoid_: Settings, admin mode, local mode
 The one-time, in-person step that links an Owner's phone to the Caretakers.
 _Avoid_: Registration, login, enrolment
 
+**Setup Checklist**:
+The list in Caretaker Mode of every one-time step the Owner's phone needs, each shown as done or missing.
+_Avoid_: Onboarding, permissions screen, wizard
+
 ## Home
 
 **Home Screen**:
@@ -47,6 +51,10 @@ _Avoid_: Address, location, route
 **Contact**:
 A person the Caretaker has chosen to appear in the Owner's contact list, with quick ways to reach them.
 _Avoid_: Favorite, friend, entry
+
+**Camera Roll**:
+The photos and videos the Owner took with the phone's own camera; never screenshots or media received from others.
+_Avoid_: Gallery, media library, DCIM
 
 ## Calls
 
