@@ -1,0 +1,63 @@
+# Simple Launcher
+
+An Android home screen for one elderly person's phone, set up and maintained by a family member so that everyday tasks take a single tap.
+
+## People
+
+**Owner**:
+The elderly person whose phone runs the launcher and who uses it day to day.
+_Avoid_: User, dad, senior
+
+**Caretaker**:
+A family member who configures the launcher on the Owner's behalf; there can be more than one.
+_Avoid_: Admin, parent mode, helper
+
+## Apps
+
+**Launcher**:
+The app on the Owner's phone that replaces the home screen.
+_Avoid_: Owner app, home app
+
+**Caretaker App**:
+The app on a Caretaker's phone used to configure the Owner's Launcher remotely; shown to users as "Cuidador".
+_Avoid_: Admin app, companion app, remote app
+
+**Caretaker Mode**:
+The PIN-protected configuration screens inside the Launcher itself, for setup that has to happen on the Owner's phone.
+_Avoid_: Settings, admin mode, local mode
+
+**Pairing**:
+The one-time step that links an Owner's phone to the Caretakers, by typing a short-lived code the Launcher shows into the Caretaker App.
+_Avoid_: Registration, login, enrolment
+
+**Setup Checklist**:
+The list in Caretaker Mode of every one-time step the Owner's phone needs, each shown as done or missing.
+_Avoid_: Onboarding, permissions screen, wizard
+
+## Home
+
+**Home Screen**:
+The single page the Owner always returns to: a clock and date above a grid of Tiles.
+_Avoid_: Desktop, main menu, launcher screen
+
+**Tile**:
+One large labelled button on the Home Screen that does one thing when tapped.
+_Avoid_: Icon, shortcut, button
+
+**Destination**:
+A fixed place the Owner can be driven to with one tap, such as "Casa".
+_Avoid_: Address, location, route
+
+**Contact**:
+A person from the Owner's own address book, reachable on WhatsApp, whom a Caretaker has chosen to show in the Launcher.
+_Avoid_: Favorite, friend, entry
+
+**Camera Roll**:
+The photos and videos the Owner took with the phone's own camera; never screenshots or media received from others.
+_Avoid_: Gallery, media library, DCIM
+
+## Calls
+
+**Call Overlay**:
+The large floating buttons shown on top of a WhatsApp video call so the Owner can flip the camera or hang up without hunting for WhatsApp's own controls.
+_Avoid_: Floating icon, bubble, call buttons
