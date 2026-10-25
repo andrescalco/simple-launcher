@@ -5,4 +5,5 @@ Caretakers configure the Owner's launcher remotely, and more than one Caretaker 
 ## Consequences
 
 - Data is stored per Owner even though there is only one, so a second Owner phone needs no migration.
-- The Owner's phone never signs in with a Google account; it is linked to the Caretakers once, in person, by scanning a QR code.
+- The Owner's phone never signs in with a Google account; it is linked to the Caretakers once by Pairing: the Launcher shows a 6-digit code that expires after 10 minutes, and a Caretaker types it into the Caretaker App, possibly from far away.
+- The Owner's WhatsApp contacts (names, numbers, photos) are uploaded so Caretakers can pick Contacts remotely.

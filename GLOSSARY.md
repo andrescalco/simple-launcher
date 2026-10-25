@@ -27,7 +27,7 @@ The PIN-protected configuration screens inside the Launcher itself, for setup th
 _Avoid_: Settings, admin mode, local mode
 
 **Pairing**:
-The one-time, in-person step that links an Owner's phone to the Caretakers.
+The one-time step that links an Owner's phone to the Caretakers, by typing a short-lived code the Launcher shows into the Caretaker App.
 _Avoid_: Registration, login, enrolment
 
 **Setup Checklist**:
@@ -49,7 +49,7 @@ A fixed place the Owner can be driven to with one tap, such as "Casa".
 _Avoid_: Address, location, route
 
 **Contact**:
-A person the Caretaker has chosen to appear in the Owner's contact list, with quick ways to reach them.
+A person from the Owner's own address book, reachable on WhatsApp, whom a Caretaker has chosen to show in the Launcher.
 _Avoid_: Favorite, friend, entry
 
 **Camera Roll**:
